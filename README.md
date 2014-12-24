@@ -1,79 +1,86 @@
-OptimizedCAD
-============
+# OptimizedCAD
 
 My AutoCAD commands ported for both English & Spanish versions.
+
+This library is part of the [Getting Architecture Done](http://www.gettingarchitecturedone.com/?utm_source=github&utm_medium=GADKit) project. Follow [@GettingArchDone](http://twitter.com/GettingArchDone) on Twitter or [Facebook](http://facebook.com/gettingarchitecturedone) to keep updated.
+
+## Usage
+
+Copy and paste the following commands into your *acad.pgp* file. Commands for both English and Spanish AutoCAD versions are provided.
 
 ## References
 * [Command Translator](http://www.cadforum.cz/cadforum_en/command.asp?ini=M&lan=ES)
 
-## English acad.pgpg
+## English acad.pgp
 
+;Create Polyline
 A, *PLINE
-;POL 
 
+;Create Line
 AA, *LINE
-;LINEA 
 
-F, *MATCHPROP
-;*IGUALARPROP
-
-FF, *OFFSET
-;DESFASE 
-
-V, *JOIN
-;UNIR	
-
+;Create Spline
 SC, *SPLINE	
 
+;Match Properties
+F, *MATCHPROP
+
+;Offset
+FF, *OFFSET
+
+;Join
+V, *JOIN
+
+;Move
 D, *MOVE
-;DESPLAZA 
 
-
+;Scale
 ES, *SCALE
-;ESCALA	
 
-R, *TRIM
-;RECORTA 
+;Trim
+R, *TRIM 
 
+;Stretch
 TT, *STRETCH
-;ESTIRA	
 
+;Symmetry / Mirror
 S, *MIRROR
-;SIMETRIA 
 
+;Align
 W, *ALIGN
-;ALINEAR 
 
+;Rotate
 G, *ROTATE
-;GIRA
  
+;Explode
 X, *EXPLODE
-;DESCOMP	
 
+;Boundary
 CC, *BOUNDARY
-;CONTORNO	
 
+;Polyline Edit
 ED, *PEDIT
 
+;Copy
 C, *COPY
-;COPIA 
 
+;Erase
 E, *ERASE
-;BORRA 
 
+;Measure Distance
 DD, *DIST 
 
+;Chamfer
 Q, *CHAMFER
-;CHAFLAN 
 
+;Arrange Objects' Order
 B, *DRAWORDER
-;ORDENAOBJETOS
 
+;Create Text Object
 T, *MTEXT
-;TEXTOM 
 
+;Hatch (Sombrear)
 SS, *HATCH
-;SOMBREA 
 
 CA, *LAYON	
 CD, *LAYISO	
@@ -83,94 +90,134 @@ CW, *LAYMCUR
 CE, *LAYDEL 
 CQ, *LAYCUR 
 CF, *LAYMRG
-Ç, *PROPERTIES
-;PROPIEDADES	
-TR, *PLOT
-;TRAZAR	
 
+;Properties
+Ç, *PROPERTIES
+
+;Plot
+TR, *PLOT
+
+;Options
 OP, *OPTIONS
-;OPCIONES 
 
 ;2012-10-20
+;Preview
 RE, *PREVIEW
-;previsualizar
 
 ;2012-10-25
+;Set New Coordinate System
 SCS, *UCS
-;SCP
 
 
 ## Spanish acad.pgp
 
-A,  *POL                       	;Polilínea;Dibuja una polilínea.
+;Polilínea
+A, *POL
 
-AA,  *LINEA                 	 ;Línea
+;Línea
+AA, *LINEA
 
-F,  *IGUALARPROP     	 ;Igualar propiedades
+;Igualar propiedades
+F, *IGUALARPROP
 
-FF,  *DESFASE           	;Desfase 
+;Desfase
+FF, *DESFASE
 
-V, *UNIR		;Unir polilínea
+;Unir polilínea
+V, *UNIR
 
-SC,   *SPLINE		;Spline
+;Spline
+SC, *SPLINE
 
-D,     *DESPLAZA 	;Desplazar 
+;Desplazar 
+D, *DESPLAZA
 
-EE,   *EQDIST		;Equidistancia
+;Equidistancia (Offset)
+EE, *EQDIST
 
-ES, *ESCALA		;Escalar
+;Escalar
+ES, *ESCALA
 
-R,     *RECORTA 		;Recortar
+;Recortar
+R, *RECORTA
 
-Q,    *CHAFLAN 		;Chaflán
+;Chaflán
+Q, *CHAFLAN
 
-TT,   *ESTIRA		;Estirar
+;Estirar
+TT, *ESTIRA
 
-S,    *SIMETRIA 		;Simetría
+;Simetría
+S, *SIMETRIA
 
-W,   *ALINEAR 		;Alinear
+;Alinear
+W, *ALINEAR
 
-G,    *GIRA 		;Gira
+;Girar
+G, *GIRA
 
-X,     *DESCOMP		;Descomponer
+;Descomponer
+X, *DESCOMP
 
-CC,   *CONTORNO	;Contorno
+;Contorno
+CC, *CONTORNO
 
-ED,   *EDITPOL		;Editar polilínea;Utilizada para convertir líneas en polilíneas.
+;Editar polilínea
+;Utilizada para convertir líneas en polilíneas.
+ED, *EDITPOL
 
-C,     *COPIA 		;Copiar
+;Copiar
+C, *COPIA
 
-E,     *BORRA 		;Borrar
+;Borrar
+E, *BORRA
 
-B,    *OB 		;Ordenar Objetos
+;Ordenar Objetos
+B, *OB
 
-DD,   *DIST 		;Distancia
+;Medir Distancia
+DD, *DIST
 
-T,     *TEXTOM 		;Texto:
+;Crear Texto:
+T, *TEXTOM
 
-SS,  *SOMBREA 	;Sombrear
+;Sombrear
+SS, *SOMBREA
 
-;Estados de capa
+;MARK: Estados de capa
 
-CA,  *LAYON		;Encender Capa
+;Encender Capa
+CA, *LAYON
 
-CD,  *LAYISO		;Aislar Capa
+;Aislar Capa
+CD, *LAYISO
 
-CS,  *LAYOFF              ;Apagar Capa
+;Apagar Capa
+CS, *LAYOFF
 
-;Selección de capa
+;MARK: Selección de capa
 
-CW,  *LAYMCUR	;Establecer Capa Actual;Establece como actual la capa de los objetos seleccionados.
+;Establecer Capa Actual
+;Establece como actual la capa de los objetos seleccionados.
+CW, *LAYMCUR
 
-CE,  *LAYDEL 		;Borrar Capa.;Elimina la capa seleccionada.
+;Borrar Capa.
+;Elimina la capa seleccionada.
+CE, *LAYDEL
 
-CQ,  *LAYCUR 		;Capa Actual;Aplica la capa actual a los elementos seleccionados.
+;Capa Actual
+;Aplica la capa actual a los elementos seleccionados.
+CQ, *LAYCUR
 
-Ç,     *PROPIEDADES	;Propiedades
+;Propiedades
+Ç, *PROPIEDADES
 
-TR,   *TRAZAR		;Trazar;Abre el menú imprimir.
+;Trazar (CTRL + P)
+;Abre el menú imprimir.
+TR, *TRAZAR
 
-;New proposed commands
+;Opciones
+;Abre el panel de configuración.
+OP, *OPCIONES
 
-OP, *OPCIONES ;Opciones;Abre el panel de configuración.
 
