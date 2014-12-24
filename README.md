@@ -296,7 +296,7 @@ OP, *OPCIONES
 
 ## License
 
-GettingArchitectureDoneKit is licensed under the MIT license. (http://opensource.org/licenses/MIT)
+OptimizedCAD is licensed under the MIT license. (http://opensource.org/licenses/MIT)
 
 ## Me
 
